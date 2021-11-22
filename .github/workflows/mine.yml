@@ -15,13 +15,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       # mine
-      - name: mine O365
-        uses: jtschichold/mm-cloud-services-miners@0b2b3ea8b14a9d892b11a1ac5cf81addc4b68ba6
-        with:
-          config: ./cs-mining-config.yml
-          configSection: o365
-        env:
-          O365MINER_CLIENT_GUID: ${{ secrets.GUID }}
       - name: mine Azure
         uses: jtschichold/mm-cloud-services-miners@0b2b3ea8b14a9d892b11a1ac5cf81addc4b68ba6
         with:
