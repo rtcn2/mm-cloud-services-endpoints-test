@@ -40,6 +40,11 @@ jobs:
         with:
           config: ./cs-mining-config.yml
           configSection: facebook
+      - name: mine Twitter
+        uses: jtschichold/mm-cloud-services-miners@0b2b3ea8b14a9d892b11a1ac5cf81addc4b68ba6
+        with:
+          config: ./cs-mining-config.yml
+          configSection: twitter
       # processing
       - name: Process IP lists
         uses: jtschichold/mm-process-ip-list@a4725a3d55a6951e88e59dd0f04a823220e20910
