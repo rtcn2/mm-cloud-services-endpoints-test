@@ -136,6 +136,8 @@ aws:
       - resultPath: ./aws/all-regions-ips.txt
       - resultPath: ./aws/cloudfront-ips.txt
         filter: "[?service=='CLOUDFRONT'].endpoint"
+      - resultPath: ./aws/cloudfront-v4-ips.txt
+        filter: "[?endpoint=='ip_prefix' && service=='CLOUDFRONT'].endpoint"
 adobe:
   - name: mine Adobe Creative Cloud Network Endpoints
     miner: AdobeCreativeMiner
