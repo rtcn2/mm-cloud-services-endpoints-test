@@ -134,6 +134,8 @@ aws:
     miner: AWSIPRangesMiner
     outputs:
       - resultPath: ./aws/all-regions-ips.txt
+      - resultPath: ./aws/cloudfront-ips.txt
+        filter: "[?service=='CLOUDFRONT']"
 adobe:
   - name: mine Adobe Creative Cloud Network Endpoints
     miner: AdobeCreativeMiner
@@ -161,3 +163,11 @@ facebook:
       autonomous_system: AS32934
     outputs:
       - resultPath: ./facebook/facebook-announced-ips.txt
+twitter:
+  - name: mine Twitter AS Registered Routes
+    miner: RADBASRegisterdRoutesMiner
+    args:
+      autonomous_system: AS13414
+    outputs:
+      - resultPath: ./twitter/twitter-registered-ips.txt
+ 
